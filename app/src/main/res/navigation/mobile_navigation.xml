@@ -18,10 +18,10 @@
         tools:layout="@layout/fragment_diary_entries" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.ethanapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_activities"
+        android:name="com.example.ethanapp.ui.activities.ActivitiesFragment"
+        android:label="@string/menu_activities"
+        tools:layout="@layout/fragment_activities" />
 
     <fragment
         android:id="@+id/nav_ethan_diary"

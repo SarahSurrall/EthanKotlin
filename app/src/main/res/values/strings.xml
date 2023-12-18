@@ -9,8 +9,10 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_diary_entries">Diary Entries</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_activities">Activities Generator</string>
     <string name="ethan_diary">New Diary Entry</string>
     <string name="ethan_diary_notes">What made you feel that way?</string>
     <string name="save">Save</string>
+
+    <string name="activities_summary">Press the button get generate an activity</string>
 </resources>
