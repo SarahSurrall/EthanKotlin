@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/webView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.calmzone.CalmFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:contentDescription="Video selection">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/WebView1"
+                android:layout_width="500dp"
+                android:layout_height="375dp" />
+
+            <WebView
+                android:id="@+id/WebView2"
+                android:layout_width="500dp"
+                android:layout_height="375dp" />
+            <WebView
+                android:id="@+id/WebView3"
+                android:layout_width="500dp"
+                android:layout_height="375dp" />
+            <WebView
+                android:id="@+id/WebView4"
+                android:layout_width="500dp"
+                android:layout_height="375dp" />
+            <WebView
+                android:id="@+id/WebView5"
+                android:layout_width="500dp"
+                android:layout_height="375dp" />
+            <WebView
+                android:id="@+id/WebView6"
+                android:layout_width="500dp"
+                android:layout_height="375dp" />
+            <WebView
+                android:id="@+id/Webview7"
+                android:layout_width="500dp"
+                android:layout_height="375dp" />
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

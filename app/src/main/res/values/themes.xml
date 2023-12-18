@@ -15,10 +15,7 @@
         <!-- Customize your theme here. -->
         <item name="android:textAppearance">@style/textStyle</item>
         <item name="android:windowFullscreen">true</item>
-
     </style>
-
-
 
     <style name="Theme.EthanApp.NoActionBar">
         <item name="windowActionBar">false</item>
