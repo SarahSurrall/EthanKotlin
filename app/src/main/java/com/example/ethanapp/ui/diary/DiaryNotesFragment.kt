@@ -53,7 +53,6 @@ class DiaryNotesFragment : Fragment(){
                 db.insertNote(entry)
                 Toast.makeText(requireContext(), "Diary entry saved", Toast.LENGTH_SHORT).show()
 
-                db.getAllEntries().forEach { e -> Log.d("OIK","$e.notes" +" " + "$e.emoji" +" " + "$e.ts") }
                 binding.dairyEntryField.text.clear()
                 findNavController().navigate(R.id.action_nav_ethan_diary_notes_to_nav_home)
             }
@@ -65,9 +64,11 @@ class DiaryNotesFragment : Fragment(){
             val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
             val ts = current.format(formatter)
 
-            val emoji = 111//"happy"
-            Log.d("TAG", notesEdit.text.toString() + " " + ts + " " + emoji)
-            return DiaryEntry(notesEdit.text.toString(), ts, emoji)
+            val emoji =  arguments?.getInt("btn", 0) ?: 0
+            val helper = DiaryIconHelper()
+            val emoji_string =  helper.getString(emoji)
+            Log.d("TAG", notesEdit.text.toString() + " " + ts + " " + emoji_string)
+            return DiaryEntry(notesEdit.text.toString(), ts, emoji_string)
         }
 
         override fun onDestroyView() {

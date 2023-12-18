@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.ethanapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_diary_entries"
+        android:name="com.example.ethanapp.ui.diary_entries.DiaryEntriesFragment"
+        android:label="@string/menu_diary_entries"
+        tools:layout="@layout/fragment_diary_entries" />
 
     <fragment
         android:id="@+id/nav_slideshow"

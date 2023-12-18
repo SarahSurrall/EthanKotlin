@@ -1,17 +1,13 @@
 package com.example.ethanapp.ui.diary
 
-import com.example.ethanapp.R
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.example.ethanapp.R
 import com.example.ethanapp.databinding.FragmentDiaryBinding
 
 
@@ -29,19 +25,9 @@ class DiaryFragment : Fragment(){
             container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View {
-            val diaryViewModel =
-                ViewModelProvider(this).get(DiaryViewModel::class.java)
-
             _binding = FragmentDiaryBinding.inflate(inflater, container, false)
-            val root: View = binding.root
 
-            val textView: TextView = binding.textDiary
-            diaryViewModel.text.observe(viewLifecycleOwner) {
-                textView.text = it
-            }
-            Log.d("TAG", "GAHHHH")
-
-            return root
+            return binding.root
         }
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

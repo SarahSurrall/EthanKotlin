@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper
 data class DiaryEntry(
     val notes: String,
     val ts: String,
-    val emoji: Int
+    val emoji: String
 )
 
 class DiaryDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,  null, DATABASE_VERSION) {
@@ -25,7 +25,7 @@ class DiaryDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val createTableQuery = "CREATE TABLE $TABLE_NAME ($COLUMN_ID INTEGER PRIMARY_KEY, $COLUMN_NOTES TEXT, $COLUMN_TS TEXT, $COLUMN_EMOJI INTEGER)"
+        val createTableQuery = "CREATE TABLE $TABLE_NAME ($COLUMN_ID INTEGER PRIMARY_KEY, $COLUMN_NOTES TEXT, $COLUMN_TS TEXT, $COLUMN_EMOJI TEXT)"
         db?.execSQL(createTableQuery)
     }
 
@@ -56,7 +56,7 @@ class DiaryDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE
             val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
             val notes = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NOTES))
             val ts = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TS))
-            val emoji = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_EMOJI))
+            val emoji = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMOJI))
 
             notesList.add(DiaryEntry(notes, ts, emoji))
         }
