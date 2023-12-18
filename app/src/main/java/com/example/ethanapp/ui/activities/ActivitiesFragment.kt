@@ -43,10 +43,18 @@ class ActivitiesFragment : Fragment() {
 
         binding.randomButton.setOnClickListener {
             val pairing = getRandomPairing()
-
             binding.randomButton.setImageResource(pairing.image)
             binding.randomButton.scaleType = ImageView.ScaleType.FIT_CENTER
             binding.activityInstructionsText.setText(pairing.text)
+            binding.randomButton.animate().apply{
+                duration = 1000
+                rotationXBy(360f)
+            }
+            binding.activityInstructionsText.animate().apply {
+                duration = 1000
+                rotationXBy(360f)
+            }
+
         }
     }
 
