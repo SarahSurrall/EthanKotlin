@@ -38,7 +38,11 @@
         android:id="@+id/nav_ethan_diary_notes"
         android:name="com.example.ethanapp.ui.diary.DiaryNotesFragment"
         android:label="Diary Notes"
-        tools:layout="@layout/fragment_diary_notes" />
+        tools:layout="@layout/fragment_diary_notes" >
+        <action
+            android:id="@+id/action_nav_ethan_diary_notes_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
     <argument
         android:name="button_clicked"
         app:argType="reference" />

@@ -53,8 +53,4 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    fun buttonClick(view: View?)
-    {
-        Log.d("TAG", "hurrah for me")
-    }
 }

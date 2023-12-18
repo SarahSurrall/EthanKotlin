@@ -10,6 +10,8 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.ethanapp.R
 import com.example.ethanapp.databinding.FragmentDiaryNotesBinding
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -53,6 +55,7 @@ class DiaryNotesFragment : Fragment(){
 
                 db.getAllEntries().forEach { e -> Log.d("OIK","$e.notes" +" " + "$e.emoji" +" " + "$e.ts") }
                 binding.dairyEntryField.text.clear()
+                findNavController().navigate(R.id.action_nav_ethan_diary_notes_to_nav_home)
             }
         }
 
