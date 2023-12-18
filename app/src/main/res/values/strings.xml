@@ -11,8 +11,11 @@
     <string name="menu_diary_entries">Diary Entries</string>
     <string name="menu_activities">Activities Generator</string>
     <string name="ethan_diary">New Diary Entry</string>
+    <string name="menu_calm">Calm Zone</string>
     <string name="ethan_diary_notes">What made you feel that way?</string>
     <string name="save">Save</string>
 
     <string name="activities_summary">Press the button get generate an activity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

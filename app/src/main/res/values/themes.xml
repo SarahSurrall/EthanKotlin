@@ -34,8 +34,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <!--item name="fontFamily">textStyle</item-->
-        <item name="android:textColor">@color/white</item>
         <item name="android:textAppearance">@style/textStyle</item>
         <item name="android:windowFullscreen">true</item>
     </style>
@@ -67,8 +65,7 @@
         <item name="colorOnSecondary">@color/grey_brown</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
-        <item name="android:textAppearance">@style/textStyle</item>
+
         <item name="android:windowFullscreen">true</item>
     </style>
 

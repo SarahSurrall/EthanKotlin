@@ -12,10 +12,27 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_ethan_diary"
+        android:name="com.example.ethanapp.ui.diary.DiaryFragment"
+        android:label="Diary"
+        tools:layout="@layout/fragment_diary" >
+        <action
+            android:id="@+id/action_DiaryFragment_to_NotesFragment"
+            app:destination="@id/nav_ethan_diary_notes" />
+
+    </fragment>
+
+    <fragment
         android:id="@+id/nav_diary_entries"
         android:name="com.example.ethanapp.ui.diary_entries.DiaryEntriesFragment"
         android:label="@string/menu_diary_entries"
         tools:layout="@layout/fragment_diary_entries" />
+
+    <fragment
+        android:id="@+id/nav_calm"
+        android:name="com.example.ethanapp.ui.calmzone.CalmFragment"
+        android:label="@string/menu_calm"
+        tools:layout="@layout/fragment_calm" />
 
     <fragment
         android:id="@+id/nav_activities"
@@ -23,16 +40,7 @@
         android:label="@string/menu_activities"
         tools:layout="@layout/fragment_activities" />
 
-    <fragment
-        android:id="@+id/nav_ethan_diary"
-        android:name="com.example.ethanapp.ui.diary.DiaryFragment"
-        android:label="Diary"
-        tools:layout="@layout/fragment_diary" >
-        <action
-        android:id="@+id/action_DiaryFragment_to_NotesFragment"
-        app:destination="@id/nav_ethan_diary_notes" />
 
-     </fragment>
 
     <fragment
         android:id="@+id/nav_ethan_diary_notes"
